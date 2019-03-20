@@ -11,28 +11,10 @@ spec:
   http:
   - match:
     - uri:
-        exact: /v1/hello
-    rewrite:
-      uri: /hello
+        exact: /
     route:
     - destination:
         host: weatherappsvc
-        subset: version-1
-  - match:
-    - uri:
-        exact: /v2/hello
-    rewrite:
-      uri: /hello
-    route:
+  -route:
     - destination:
-        host: weatherappsvc
-        subset: version-2
-  - match:
-    - uri:
-        exact: /v3
-    rewrite:
-      uri: /topstories
-    route:
-    - destination:
-        host: weatherappsvc
-        subset: version-3
+      host: weatherappsvc
