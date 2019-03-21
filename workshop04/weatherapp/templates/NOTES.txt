@@ -1,0 +1,4 @@
+1. Get the application URL by running these commands:
+
+you can access this application using port-forward locally 
+because the service is not exposed to public
